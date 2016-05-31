@@ -135,7 +135,7 @@ class TopicReceive {
             // 创建JMS客户-消费者(订阅者)
             messageConsumer = session.createConsumer(topic);
 
-            messageConsumer.setMessageListener(new MessageListener() {
+            /*messageConsumer.setMessageListener(new MessageListener() {
                 @Override
                 public void onMessage(Message message) {
                     ObjectMessage objectMessage = (ObjectMessage) message;
@@ -147,7 +147,7 @@ class TopicReceive {
                     }
                     System.out.println(returnObject);
                 }
-            });
+            });*/
         } catch (JMSException e) {
             e.printStackTrace();
         }
@@ -177,11 +177,11 @@ class TopicReceive {
     public static void main(String[] args) throws Exception {
         TopicReceive topicReceive = new TopicReceive();
         topicReceive.init();
-        /*topicReceive.receive(new IMessageProcessor() {
+        topicReceive.receive(new IMessageProcessor() {
             @Override
             public void messageProcess(Serializable serializable) {
                 System.out.println("PublishAndSubscribe-->messageProcess....." + serializable.toString());
             }
-        });*/
+        });
     }
 }

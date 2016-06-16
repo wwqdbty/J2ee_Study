@@ -1,0 +1,33 @@
+body {
+	font-family: Tahoma, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+a:link {
+    font-size: 10pt;
+    color: #0000cc;
+    font-family: 宋体;
+    text-align: left;
+    text-decoration: underline;
+    TEXT-DECORATION:none;
+}
+
+a:visited {
+    font-size: 9pt;
+    color: #0000cc;
+    font-family: 宋体;
+    text-align: left;
+    text-decoration: underline;
+    TEXT-DECORATION:none;
+}
+
+a:hover {
+    color: #993300;
+    text-decoration: underline;
+    TEXT-DECORATION:none;
+}
+
+a:active {
+    color: #ff0033;
+    text-decoration: none;
+}

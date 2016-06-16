@@ -5,7 +5,7 @@
 	<groupId>com.kulang.study</groupId>
 	<artifactId>J2ee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>j2ee_study</name>
 	<url>http://maven.apache.org</url>
@@ -13,10 +13,29 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<joda-time.version>2.7</joda-time.version>
-		<java-version>1.6</java-version>
+		<java-version>1.7</java-version>
 	</properties>
 
 	<dependencies>
+		<!-- J2EE -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
 		<!-- Excel 解析工具 -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -70,6 +89,7 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+			<!--
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.6</version>
@@ -77,14 +97,32 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
-			<!--<plugin>
+			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
 					<version>3.0</version>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
-			</plugin>-->
+			</plugin>
+			-->
 		</plugins>
 	</build>
+
+
+	<!--<build>
+		<plugins>
+
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources/</directory>
+			</resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+				<targetPath>webapp</targetPath>
+			</resource>
+		</resources>
+		<finalName>fengjr-admin-web</finalName>
+	</build>-->
 </project>

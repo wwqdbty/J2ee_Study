@@ -9,7 +9,7 @@
 		<TITLE> 选项卡 DEMO </TITLE>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="css/demo.css" type="text/css">
-		<script type="text/javascript" src="js/plug-in/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
 	</HEAD>
 
 	<BODY>

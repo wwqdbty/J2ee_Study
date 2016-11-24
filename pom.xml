@@ -6,7 +6,8 @@
 	<artifactId>J2ee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
-		<module>service-api</module>
+		<module>web</module>
+		<module>api</module>
 	</modules>
 	<packaging>pom</packaging>
 

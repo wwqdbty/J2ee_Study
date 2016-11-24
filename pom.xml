@@ -5,7 +5,10 @@
 	<groupId>com.kulang.study</groupId>
 	<artifactId>J2ee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<modules>
+		<module>service-api</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>j2ee_study</name>
 	<url>http://maven.apache.org</url>
@@ -14,6 +17,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<joda-time.version>2.7</joda-time.version>
 		<java-version>1.7</java-version>
+		<servlet-api.version>3.0.1</servlet-api.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
@@ -21,7 +26,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>${servlet-api.version}</version>
 		</dependency>
 
 		<dependency>
@@ -34,6 +39,12 @@
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<!-- Excel 解析工具 -->

@@ -3,15 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>j2ee</artifactId>
+        <artifactId>j2ee-study</artifactId>
         <groupId>com.kulang.study</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web</artifactId>
+    <artifactId>j2ee-study-web</artifactId>
     <packaging>war</packaging>
-    <name>web</name>
+    <name>j2ee-study-web</name>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
@@ -67,7 +67,7 @@
         <!-- service -->
         <dependency>
             <groupId>com.kulang.study</groupId>
-            <artifactId>service</artifactId>
+            <artifactId>j2ee-study-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -4,7 +4,7 @@
 
 	<name>j2ee_study</name>
 	<groupId>com.kulang.study</groupId>
-	<artifactId>J2ee</artifactId>
+	<artifactId>j2ee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>

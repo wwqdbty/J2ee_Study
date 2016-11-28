@@ -11,7 +11,7 @@
 	<modules>
 		<module>j2ee-study-web</module>
 		<module>j2ee-study-service</module>
-	</modules>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

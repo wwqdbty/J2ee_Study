@@ -70,5 +70,12 @@
             <artifactId>j2ee-study-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!-- zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
+        </dependency>
     </dependencies>
 </project>

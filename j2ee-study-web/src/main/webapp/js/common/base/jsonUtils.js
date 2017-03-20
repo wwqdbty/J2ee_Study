@@ -26,7 +26,7 @@ var jsonUtils = {
             return true;
         }
 
-        if (common.json.getLength(jsonObject) == 0) {
+        if (jsonUtils.getLength(jsonObject) == 0) {
             return true;
         }
     },

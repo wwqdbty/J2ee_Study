@@ -92,6 +92,67 @@ var common = {
         }
         // ajax提交, data的内容即为jsonReqData
         fnCallBack(jsonReqData);
+    },
+
+    /**
+     * 创建行
+     *
+     * @param jqTableObject
+     * @param jsonSettings
+     * @returns {*|jQuery|HTMLElement}
+     */
+    createRow: function (jqTableObject, jsonSettings) {
+        if (!jqTableObject) {
+            return;
+        }
+
+        var strTr = "<tr";
+        if (jsonSettings && jsonSettings.id) {
+            strTr += " id=" + jsonSettings.id;
+        }
+        if (jsonSettings && jsonSettings.style) {
+            strTr += " style=" + jsonSettings.style
+        }
+        if (jsonSettings && jsonSettings.colspan) {
+            strTd += " rowspan=" + jsonSettings.rowspan
+        }
+        strTr += "></tr>";
+
+        var jqTr = $(strTr);
+        // 添加至表格
+        jqTr.appendTo(jqTableObject);
+
+        return jqTr;
+    },
+
+    /**
+     * 创建列
+     * @param jqTrObject
+     * @param jsonSettings
+     * @returns {*|jQuery|HTMLElement}
+     */
+    createCell: function (jqTrObject, jsonSettings) {
+        if (!jqTrObject) {
+            return;
+        }
+
+        var strTd = "<td";
+        if (jsonSettings && jsonSettings.id) {
+            strTd += " id=" + jsonSettings.id;
+        }
+        if (jsonSettings && jsonSettings.style) {
+            strTd += " style=" + jsonSettings.style
+        }
+        if (jsonSettings && jsonSettings.colspan) {
+            strTd += " colspan=" + jsonSettings.colspan
+        }
+        strTd += ">" + ((!jsonSettings || !jsonSettings.value) ? "" : jsonSettings.value) + "</td>";
+
+        var jqTd = $(strTd);
+        // 添加至行
+        jqTd.appendTo(jqTrObject);
+
+        return jqTd;
     }
 }
 
@@ -124,6 +185,22 @@ String.prototype.trim = function () {
 String.prototype.trimAll = function () {
     return this.replace(/\s/g, "");
 };
+
+/**
+ * 全部替换
+ * @param searchValue
+ * @param replaceValue
+ * @returns {String}
+ */
+String.prototype.replaceAll = function(searchValue, replaceValue) {
+    var strReplacedValue = this;
+
+    while (strReplacedValue.indexOf(searchValue) >= 0){
+        strReplacedValue = strReplacedValue.replace(searchValue, replaceValue);
+    }
+
+    return strReplacedValue;
+}
 
 /* ------------------------------------------------------------------------------ String相关END ------------------------------------------------------------------------------ */
 

@@ -64,18 +64,33 @@
             <artifactId>activemq-all</artifactId>
         </dependency>
 
-        <!-- service -->
-        <dependency>
-            <groupId>com.kulang.study</groupId>
-            <artifactId>j2ee-study-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
         <!-- zookeeper -->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.6</version>
+        </dependency>
+
+        <!-- Excel 解析工具 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+
+        <!-- Getter/Setter工具 Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- modules-service -->
+        <dependency>
+            <groupId>com.kulang.study</groupId>
+            <artifactId>j2ee-study-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

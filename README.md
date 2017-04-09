@@ -1,1 +1,1 @@
-# J2ee_Study
+# j2ee-study

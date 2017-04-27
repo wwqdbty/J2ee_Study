@@ -54,7 +54,7 @@ var numberUtils = {
                 /* 替换出现次数大于1次的小数点 */
                 currentValue = currentValue.replace(/\./, "#").replace(/\./g, "").replace(/#/, ".");
 
-                if (!currentValue) {
+                if (currentValue) {
                     currentValue = parseFloat(currentValue).toFixed(decimalsNum);
                 }
 
@@ -64,7 +64,7 @@ var numberUtils = {
             // 替换所有非数字
             currentValue = currentValue.replace(/[^\d]/g, "");
 
-            if (!currentValue) {
+            if (currentValue) {
                 currentValue = parseInt(currentValue);
             }
 

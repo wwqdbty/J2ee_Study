@@ -37,6 +37,10 @@ var numberUtils = {
      * @author WangWenQiang
      */
     numberFormat: function (currentValue, decimalsNum) {
+        if (!currentValue) {
+            return "";
+        }
+
         // 最大支持20位小数
         if (!decimalsNum && decimalsNum > 20) {
             decimalsNum = 20;

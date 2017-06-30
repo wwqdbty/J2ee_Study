@@ -1,4 +1,4 @@
-package com.kulang.dto;
+package com.kulang.study.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

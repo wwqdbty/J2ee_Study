@@ -1,6 +1,6 @@
 package com.kulang.service.impl;
 
-import com.alibaba.fastjson.JSON;
+/*import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.fengjr.p2p.asset.admin.service.IThirdPlatformDataService;
 import com.fengjr.p2p.asset.common.config.ThirdPlatformConfig;
@@ -39,10 +39,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.*;
 
-/**
- * Created by jingbo.wang@fengjr.com on 2017/2/14.
- * 导出数据实现类
- */
+*//**
+ * 资产系统的asset 的三方平台数据服务. 可参照的内容有
+ * 1. 数据校验validateAndProcess、validateAndProcessDict
+ * 2. apache BeanUtils 类型转换器注册 batchAddRepayData、a、b
+ *//*
 @Slf4j
 @Service
 public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
@@ -114,7 +115,7 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         return listThirdPlatformDictionary;
 
 
-        /*List<ThirdPlatformDictionary> listDc = new ArrayList<ThirdPlatformDictionary>();
+        *//*List<ThirdPlatformDictionary> listDc = new ArrayList<ThirdPlatformDictionary>();
 
         ThirdPlatformDictionary dc1 = new ThirdPlatformDictionary();
         dc1.setId("1");dc1.setEname("n_1");dc1.setCname("名字1");dc1.setParentId("0");
@@ -177,7 +178,7 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         listDc.add(dc3_2);
         listDc.add(dc3_3);
 
-        return listDc;*/
+        return listDc;*//*
     }
 
     @Override
@@ -307,14 +308,14 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         long lStartCallTime = new Date().getTime();
         log.info("请求获取用户征信信息接口, url={}, [requestParam={}]", url, mapParam);
 
-        /*Map<String, String> mapCallResult = null;
+        *//*Map<String, String> mapCallResult = null;
         try {
             mapCallResult = httpCommon.callGetService(url, mapParam, new TypeReference<Map<String, String>>() {});
         } catch (Exception ex) {
             log.error("错误:exception={}. 请求获取用户征信信息接口, url={}, [requestParam={}]", ex, url, JSON.toJSONString(mapParam));
 
             return null;
-        }*/
+        }*//*
 
         HttpResult result = null;
         try {
@@ -354,7 +355,7 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         return mapCallResult;
 
 
-        /*String strCreditJson = "{\n" +
+        *//*String strCreditJson = "{\n" +
                 "    \"n_1\": {\n" +
                 "        \"n_1_1\": \"value_1_1\",\n" +
                 "        \"n_1_2\": \"value_1_2\",\n" +
@@ -388,7 +389,7 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         Map<String, String> map = JSON.parseObject(strCreditJson, new com.alibaba.fastjson.TypeReference<Map<String, String>>() {
         });
 
-        return map;*/
+        return map;*//*
     }
 
     @Override
@@ -500,12 +501,12 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
 
         return result.getData();
     }
-    /**
+    *//**
      * 重组已解析为数组的三方机构还款数据Excel
      *
      * @param listParsedExcelRepayData
      * @return
-     */
+     *//*
     private List<ThirdPlatformRepaymentExcelData> recombineParsedExcelRepayData(final List<String[]> listParsedExcelRepayData) {
         if (CollectionUtils.isEmpty(listParsedExcelRepayData)) {
             return listParsedExcelRepayData == null ? null : Collections.EMPTY_LIST;
@@ -580,13 +581,13 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         return list;
     }
 
-    /**
+    *//**
      * 校验并对数据进行处理, 将直接对参数的内容进行操作
      *
      * @param listThirdPlatformRepaymentExcelData 三方平台导入的Excel还款数据
      *
      * @return 校验不通过的记录
-     */
+     *//*
     private List<ImportExcelResultDetail> validateAndProcess(List<ThirdPlatformRepaymentExcelData> listThirdPlatformRepaymentExcelData) {
         if (CollectionUtils.isEmpty(listThirdPlatformRepaymentExcelData)) {
             return listThirdPlatformRepaymentExcelData == null ? null : Collections.EMPTY_LIST;
@@ -832,12 +833,12 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         return listFailedRecord;
     }
 
-    /**
+    *//**
      * 重组已解析为数组的三方机构字典数据Excel
      *
      * @param mapListParsedExcelData
      * @return
-     */
+     *//*
     private List<ThirdPlatformDictionaryExcelData> recombineParsedExcelDictData(final Map<Integer, List<String[]>> mapListParsedExcelData) {
         if (MapUtils.isEmpty(mapListParsedExcelData)) {
             return mapListParsedExcelData == null ? null : Collections.EMPTY_LIST;
@@ -873,13 +874,13 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
         return list;
     }
 
-    /**
+    *//**
      * 校验并对数据进行处理, 将直接对参数的内容进行操作, 分步校验, 每条数据仅返回一个错误
      *
      * @param listExcelData 三方平台导入的Excel字典数据
      *
      * @return 校验不通过的记录
-     */
+     *//*
     private List<ImportExcelResultDetail> validateAndProcessDict(List<ThirdPlatformDictionaryExcelData> listExcelData) {
         if (CollectionUtils.isEmpty(listExcelData)) {
             return listExcelData == null ? null : Collections.EMPTY_LIST;
@@ -1089,4 +1090,4 @@ public class ThirdPlatformDataServiceImpl implements IThirdPlatformDataService {
             e.printStackTrace();
         }
     }
-}
+}*/

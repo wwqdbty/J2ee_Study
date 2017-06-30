@@ -11,7 +11,7 @@
 	<modules>
 		<module>j2ee-study-web</module>
 		<module>j2ee-study-service</module>
-		<module>j2ee-study-common</module>
+		<module>j2ee-study-domain</module>
 	</modules>
 
 	<properties>
@@ -30,6 +30,13 @@
 
 	<!-- 所有module通用的依赖包 -->
 	<dependencies>
+		<!-- 本项目module j2ee-study-domain -->
+		<dependency>
+			<groupId>com.kulang.study</groupId>
+			<artifactId>j2ee-study-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- 日期辅助类Joda-Time -->
 		<dependency>
             <groupId>joda-time</groupId>
@@ -118,6 +125,13 @@
 	<!-- module可能的依赖包, 尽可能使版本统一在此设置 -->
 	<dependencyManagement>
 		<dependencies>
+			<!-- 本项目module j2ee-study-service -->
+			<dependency>
+				<groupId>com.kulang.study</groupId>
+				<artifactId>j2ee-study-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
 			<!-- J2EE -->
 			<dependency>
 				<groupId>javax.servlet</groupId>

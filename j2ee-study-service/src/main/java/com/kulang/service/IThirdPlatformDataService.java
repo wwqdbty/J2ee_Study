@@ -1,6 +1,7 @@
 package com.kulang.service;
 
-import com.kulang.enums.EnumThirdPlatform;
+import com.kulang.study.domain.model.ImportExcelResultDetail;
+import com.kulang.study.domain.model.enums.EnumThirdPlatform;
 
 import java.util.List;
 import java.util.Map;

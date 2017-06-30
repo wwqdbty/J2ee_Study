@@ -14,6 +14,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+        <!-- ********************************** 本项目 ********************************** -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -29,11 +30,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kulang.study</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

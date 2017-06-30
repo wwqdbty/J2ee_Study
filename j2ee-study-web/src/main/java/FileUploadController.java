@@ -1,4 +1,4 @@
-import org.junit.Test;
+import com.kulang.study.domain.util.PropertiesUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;

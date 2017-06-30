@@ -1,6 +1,6 @@
-package com.kulang.dto;
+package com.kulang.study.domain.model;
 
-import com.kulang.utils.DateUtils;
+import com.kulang.study.domain.util.DateUtils;
 import lombok.Data;
 
 import java.util.List;

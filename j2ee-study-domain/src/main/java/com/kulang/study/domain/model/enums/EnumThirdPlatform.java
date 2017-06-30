@@ -1,4 +1,4 @@
-package com.kulang.enums;
+package com.kulang.study.domain.model.enums;
 
 /**
  * Created by dell on 2017/3/2.

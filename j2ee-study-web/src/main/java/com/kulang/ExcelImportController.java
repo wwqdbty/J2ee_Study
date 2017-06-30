@@ -1,11 +1,11 @@
 package com.kulang;
 
-import com.kulang.dto.ImportExcelResult;
-import com.kulang.dto.ImportExcelResultDetail;
-import com.kulang.enums.EnumThirdPlatform;
-import com.kulang.enums.ErrorCodeEnum;
 import com.kulang.service.IThirdPlatformDataService;
-import com.kulang.utils.excel.ExcelUtils;
+import com.kulang.study.domain.model.ImportExcelResult;
+import com.kulang.study.domain.model.ImportExcelResultDetail;
+import com.kulang.study.domain.model.enums.EnumThirdPlatform;
+import com.kulang.study.domain.model.enums.ErrorCodeEnum;
+import com.kulang.study.domain.util.excel.ExcelUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

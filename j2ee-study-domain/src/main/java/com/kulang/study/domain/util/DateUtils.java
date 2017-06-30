@@ -1,14 +1,12 @@
-package com.kulang.utils;
-
-import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.kulang.study.domain.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@Slf4j
+/**
+ * 项目中复制的一个工具类, 后期整理
+ */
 public class DateUtils {
     public static final String YYYYMMDD = "yyyy-MM-dd";
 
@@ -16,7 +14,7 @@ public class DateUtils {
 
     public static final int FIRST_DAY_OF_WEEK = Calendar.MONDAY; // 中国周一是一周的第一天
 
-    private static final Logger logger = LoggerFactory.getLogger(DateUtils.class);
+//    private static final Logger logger = LoggerFactory.getLogger(DateUtils.class);
 
 
     public static Date getNow() {
@@ -94,9 +92,9 @@ public class DateUtils {
                     date = new SimpleDateFormat(format).parse(value);
                 }
             } catch (ParseException e) {
-                log.error("异常", e);
+//                log.error("异常", e);
             } catch (Exception e) {
-                log.error("异常", e);
+//                log.error("异常", e);
             } finally {
                 format = null;
             }
@@ -491,7 +489,7 @@ public class DateUtils {
             SimpleDateFormat format = new SimpleDateFormat(pattern);
             date = format.parse(strDate);
         } catch (Exception e) {
-            logger.error("parseDate error:" + e);
+//            logger.error("parseDate error:" + e);
         }
         return date;
     }
@@ -976,7 +974,7 @@ public class DateUtils {
             }
         } catch (Exception e) {
             monthList = null;
-            log.error("getMonth error", e);
+//            log.error("getMonth error", e);
         }
         return monthList;
     }

@@ -1,4 +1,4 @@
-package com.kulang.enums;
+package com.kulang.study.domain.model.enums;
 
 /**
  * Created by jian.zhang on 2016/11/28.

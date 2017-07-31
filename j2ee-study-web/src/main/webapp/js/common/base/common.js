@@ -21,7 +21,7 @@ var common = {
     },
 
     /**
-     * 取出左右空格并将新值设置至表单文本项
+     * 去除左右空格并将新值设置至表单文本项
      */
     spaceRemove: function spaceRemove() {
         // 页面所有input标签
